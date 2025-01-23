@@ -1,12 +1,9 @@
 package com.capsa;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
-import jakarta.persistence.SequenceGenerators;
 
 @Entity
-public class user {
+public class User {
     @jakarta.persistence.Id
     private int Id;
     private String Uname;
@@ -35,6 +32,15 @@ public class user {
 
     public void setPasswrd(String passwrd) {
         Passwrd = passwrd;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "Id=" + Id +
+                ", Uname='" + Uname + '\'' +
+                ", Passwrd='" + Passwrd + '\'' +
+                '}';
     }
 }
 
